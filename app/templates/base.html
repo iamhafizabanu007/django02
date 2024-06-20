@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Page is{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'app/css/main.css' %}">
+
+</head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'html1' %}">HTML</a>
+        <a href="{% url 'css' %}">CSS</a>
+        <a href="{% url 'images' %}">Images</a>
+        <a href="{% url 'tables' %}">Tables</a>
+        <a href="PYTHON.html">PYTHON</a>
+        <a href="DJANGO.html">DJANGO</a>
+    </div>
+    <div class="main">
+        <button type="submit" class="deo">BACK</button>
+        <button type="submit" class="deo">NEXT</button>
+    </div>
+    {% block main %}
+    {% endblock main %}
+
+    <div class="footer">
+        <p>w3schools</p>
+        <p>Goodluck</p>
+        <p>copyrights@2023</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+tables
+{% endblock title %}
+{% block main %}
+<link rel="stylesheet" href="{% static 'app/css/table.css' %}">
+<table>
+    <tr>
+    <th>email</th>
+    <th>name</th>
+    </tr>
+    {% for m in obj %}
+    <tr>
+        <td>{{m.email}}</td>
+        <td>{{m.name}}</td>
+    </tr>
+    {% endfor %}
+   
+</table>
+this is tables page
+{% endblock main %}
